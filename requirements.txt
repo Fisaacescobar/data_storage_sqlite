@@ -1,0 +1,10 @@
+# Dependencias principales del portafolio
+numpy
+pandas
+matplotlib
+scikit-learn
+
+# Notas:
+# - sqlite3 ya viene con Python estándar.
+# - Si vas a ejecutar notebooks, puedes agregar opcionalmente:
+# jupyter

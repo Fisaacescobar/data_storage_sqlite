@@ -1,0 +1,23 @@
+-- top_customers --
+SCAN c
+SEARCH o USING INDEX idx_orders_customer (customer_id=?)
+USE TEMP B-TREE FOR ORDER BY
+
+-- monthly_revenue --
+SCAN o
+USE TEMP B-TREE FOR GROUP BY
+
+-- category_city_matrix --
+SCAN o
+SEARCH c USING INTEGER PRIMARY KEY (rowid=?)
+USE TEMP B-TREE FOR GROUP BY
+
+-- window_rank_in_city --
+CO-ROUTINE t
+CO-ROUTINE (subquery-3)
+SCAN c
+SEARCH o USING INDEX idx_orders_customer (customer_id=?)
+USE TEMP B-TREE FOR ORDER BY
+SCAN (subquery-3)
+SCAN t
+USE TEMP B-TREE FOR ORDER BY
