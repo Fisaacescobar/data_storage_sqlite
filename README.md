@@ -1,7 +1,6 @@
-# Módulo 1 — SQLite con Python + Pandas + Matplotlib
+## SQLite con Python + Pandas + Matplotlib
 
-Pequeño módulo para probar **almacenamiento y recuperación de datos** usando SQLite.
-La idea es simple: crear una BD de juguete, poblarla con datos sintéticos y correr
+Crear una BD de juguete, poblarla con datos sintéticos y correr
 algunas consultas útiles, integrando `pandas` y graficando con `matplotlib`.
 
 ## Requisitos
